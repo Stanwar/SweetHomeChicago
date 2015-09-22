@@ -1,0 +1,833 @@
+<html>
+<head>
+	<link href="sb-admin-2.css" rel="stylesheet">
+	    <meta name="viewport" content="width=device-width"></meta>
+	<div class="box" id="container">
+			<div class="div1" id="div1"><h1>CITY OF CHICAGO</h1></div>
+			<div class="div2" id="div2"> <h1 id ="R1" > REGION 1 </H1>
+				<div class="div21" id = "div21"> DIV 21</div>
+				<div class="div23" id = "div23"> DIV 22</div>
+			</div>
+			<div class="div3" id="div3"><h1 id ="R2" > REGION 2 </H1>
+				<div class="div31" id = "div31"> DIV 31</div>
+				<div class="div33" id = "div33"> DIV 32</div>
+			</div>
+			<div class="div4" id="div4"><h1 id ="R3" > REGION 3 </H1>
+				<div class="div41" id = "div41"> DIV 41</div>
+				<div class="div43" id = "div43"> DIV 42</div>
+			</div>
+
+			<div class="div5" id="div5">
+                <select id="Chicago_Data" onchange="updateDropDownTarget()">
+                    <option value="Districts">Districts</option>                  
+                    <option value="Communities">Communities</option>  
+                </select>
+
+                <select id ="dropDownList1" name = "Communities">
+                    <option value="Chicago">
+                        Chicago
+                    </option>
+                    <option value="Rogers Park" id="Rogers Park">
+                        Rogers Park
+                    </option>
+
+                    <option value="West Ridge" id = "West Ridge">
+                        West Ridge
+                    </option>
+
+                    <option value="Uptown" id= "Uptown">
+                        Uptown
+                    </option>
+                    <option value="Lincoln Square" id="Lincoln Square">
+                        Lincoln Square
+                    </option>
+                    <option value="North Center" id="North Center">
+                        North Center
+                    </option>
+                    <option value="Lake View" id ="Lake View">
+                        Lake View
+                    </option>
+                    <option value="Lincoln Park" id ="Lincoln Park">
+                        Lincoln Park
+                    </option>
+                    <option value="Near North Side" id ="Near North Side">
+                        Near North Side
+                    </option>
+                    <option value="Edison Park" id = "Edison Park">
+                        Edison Park
+                    </option>
+                    <option value="Norwood Park" id="Norwood Park">
+                        Norwood Park
+                    </option>
+                    <option value="Jefferson Park" id="Jefferson Park">
+                        Jefferson Park
+                    </option>
+                    <option value="Forest Glen" id="Forest Glen">
+                        Forest Glen
+                    </option>
+                    <option value="North Park" id="North Park">
+                        North Park
+                    </option>
+                     <option value="Albany Park" id="Albany Park">
+                        Albany Park
+                    </option>
+                    <option value="Portage Park" id ="Portage Park">
+                        Portage Park
+                    </option>
+                    <option value="Irving Park" id="Irving Park">
+                        Irving Park
+                    </option>
+                    <option value="Dunning" id ="Dunning">
+                        Dunning
+                    </option>
+                    <option value="Montclare" id ="Montclare">
+                        Montclare
+                    </option>
+                    <option value="Belmont Cragin" id ="Belmont Cragin">
+                        Belmont Cragin
+                    </option>
+                    <option value="Hermosa" id ="Hermosa">
+                        Hermosa
+                    </option>
+                    <option value="Avondale" id ="Avondale">
+                        Avondale
+                    </option>
+                    <option value="Logan Square" id="Logan Square" >
+                        Logan Square
+                    </option>
+                    <option value="Humboldt Park" id="Humboldt Park">
+                        Humboldt Park
+                    </option>
+                    <option value="West Town" id="West Town">
+                        West Town
+                    </option>
+                    <option value="Austin" id="Austin">
+                        Austin
+                    </option>
+                    <option value="West Garfield Park" id="West Garfield Park">
+                        West Garfield Park
+                    </option>
+                    <option value="East Garfield Park" id="East Garfield Park">
+                        East Garfield Park
+                    </option>
+                    <option value="Near West Side" id="Near West Side">
+                        Near West Side
+                    </option>
+                    <option value="North Lawndale" id ="North Lawndale">
+                        North Lawndale
+                    </option>
+                    <option value="South Lawndale" id="South Lawndale">
+                        South Lawndale
+                    </option>
+                    <option value="Lower West Side" id="Lower West Side">
+                        Lower West Side
+                    </option>
+                    <option value="Loop" id ="Loop">
+                        Loop
+                    </option>
+                    <option value="Near South Side" id ="Near South Side">
+                        Near South Side
+                    </option>
+                    <option value="Armour Square" id="Armour Square">
+                        Armour Square
+                    </option>
+                    <option value="Douglas" id="Douglas">
+                        Douglas
+                    </option>
+                    <option value="Oakland" id="Oakland">
+                        Oakland
+                    </option>
+                    <option value="Fuller Park" id="Fuller Park">
+                        Fuller Park
+                    </option>
+                    <option value="Grand Boulevard" id="Grand Boulevard">
+                        Grand Boulevard
+                    </option>
+                    <option value="Kenwood" id="Kenwood">
+                        Kenwood
+                    </option> 
+                    <option value="Washington Park" id="Washington Park">
+                        Washington Park
+                    </option> 
+                    <option value="Hyde Park" id="Hyde Park">
+                        Hyde Park
+                    </option> 
+                    <option value="Woodlawn" id="Woodlawn">
+                        Woodlawn
+                    </option> 
+                    <option value="South Shore" id="South Shore">
+                        South Shore
+                    </option> 
+                    <option value="Chatham" id="Chatham">
+                        Chatham
+                    </option> 
+                    <option value="Avalon Park" id="Avalon Park">
+                        Avalon Park
+                    </option> 
+                    <option value="South Chicago" id="South Chicago">
+                        South Chicago
+                    </option> 
+                    <option value="Burnside" id="Burnside">
+                        Burnside
+                    </option> 
+                    <option value="Calumet Heights" id="Calumet Heights">
+                        Calumet Heights
+                    </option> 
+                    <option value="Roseland" id="Roseland">
+                        Roseland
+                    </option> 
+                    <option value="Pullman" id="Pullman">
+                        Pullman
+                    </option> 
+                    <option value="South Deering" id="South Deering">
+                        South Deering
+                    </option> 
+                    <option value="East Side" id="East Side">
+                        East Side
+                    </option> 
+                    <option value="West Pullman" id="West Pullman">
+                        West Pullman
+                    </option> 
+                    <option value="Riverdale" id="Riverdale">
+                        Riverdale
+                    </option>
+                    <option value="Hegewisch" id="Hegewisch">
+                        Hegewisch
+                    </option> 
+                    <option value="Garfield Ridge" id = "Garfield Ridge">
+                        Garfield Ridge
+                    </option> 
+                    <option value="Archer Heights" id="Archer Heights">
+                        Archer Heights
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="McKinley Park" id="McKinley Park">
+                        McKinley Park
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="Bridgeport" id="Bridgeport">
+                        Bridgeport
+                    </option>
+                    <option value="New City" id="New City">
+                        New City
+                    </option>
+                    <option value="West Elsdon" id="West Elsdon">
+                        West Elsdon
+                    </option>
+                    <option value="Gage Park" id="Gage Park">
+                        Gage Park
+                    </option>
+                    <option value="Clearing" id="Clearing">
+                        Clearing
+                    </option>
+                    <option value="West Lawn" id="West Lawn">
+                        West Lawn
+                    </option>
+                    <option value="Chicago Lawn" id="Chicago Lawn">
+                        Chicago Lawn
+                    </option>
+                    <option value="Greater Grand Crossing" id="Greater Grand Crossing">
+                        Greater Grand Crossing
+                    </option>
+                    <option value="Ashburn" id="Ashburn">
+                        Ashburn
+                    </option>
+                    <option value="Auburn Gresham" id="Auburn Gresham">
+                        Auburn Gresham
+                    </option>
+                    <option value="Beverly" id="Beverly">
+                        Beverly
+                    </option>
+                    <option value="Washington Heights" id="Washington Heights">
+                        Washington Heights
+                    </option>
+                    <option value="Mount Greenwood" id="Mount Greenwood">
+                        Mount Greenwood
+                    </option>
+                    <option value="Morgan Park" id="Morgan Park">
+                        Morgan Park
+                    </option>
+                    <option value="O'Hare" id="O'Hare">
+                        O'Hare
+                    </option>
+                    <option value="Edgewater" id="Edgewater">
+                        Edgewater
+                    </option>
+                </select>
+
+                <select id="distDropList1" name ="Districts">
+                	<option id="Chicago">Chicago</option>
+                    <option id="Far North Side" >Far North Side</option>
+                    <option id="North West Side" >North West Side</option>
+                    <option id="North Side" >North Side</option>
+                    <option id="West Side" >West Side</option>
+                    <option id="Central" >Central</option>
+                    <option id="South Side" >South Side</option>
+                    <option id="Southwest Side" >Southwest Side</option>
+                    <option id="Far Southwest Side" >Far Southwest Side</option>
+                    <option id="Far Southeast Side" >Far Southeast Side</option>
+                </select>
+
+                <select id ="dropDownList2" name="Communities">
+                    <option value="Chicago">
+                        Chicago
+                    </option>
+                    <option value="Rogers Park" id="Rogers Park">
+                        Rogers Park
+                    </option>
+
+                    <option value="West Ridge" id = "West Ridge">
+                        West Ridge
+                    </option>
+
+                    <option value="Uptown" id= "Uptown">
+                        Uptown
+                    </option>
+                    <option value="Lincoln Square" id="Lincoln Square">
+                        Lincoln Square
+                    </option>
+                    <option value="North Center" id="North Center">
+                        North Center
+                    </option>
+                    <option value="Lake View" id ="Lake View">
+                        Lake View
+                    </option>
+                    <option value="Lincoln Park" id ="Lincoln Park">
+                        Lincoln Park
+                    </option>
+                    <option value="Near North Side" id ="Near North Side">
+                        Near North Side
+                    </option>
+                    <option value="Edison Park" id = "Edison Park">
+                        Edison Park
+                    </option>
+                    <option value="Norwood Park" id="Norwood Park">
+                        Norwood Park
+                    </option>
+                    <option value="Jefferson Park" id="Jefferson Park">
+                        Jefferson Park
+                    </option>
+                    <option value="Forest Glen" id="Forest Glen">
+                        Forest Glen
+                    </option>
+                    <option value="North Park" id="North Park">
+                        North Park
+                    </option>
+                     <option value="Albany Park" id="Albany Park">
+                        Albany Park
+                    </option>
+                    <option value="Portage Park" id ="Portage Park">
+                        Portage Park
+                    </option>
+                    <option value="Irving Park" id="Irving Park">
+                        Irving Park
+                    </option>
+                    <option value="Dunning" id ="Dunning">
+                        Dunning
+                    </option>
+                    <option value="Montclare" id ="Montclare">
+                        Montclare
+                    </option>
+                    <option value="Belmont Cragin" id ="Belmont Cragin">
+                        Belmont Cragin
+                    </option>
+                    <option value="Hermosa" id ="Hermosa">
+                        Hermosa
+                    </option>
+                    <option value="Avondale" id ="Avondale">
+                        Avondale
+                    </option>
+                    <option value="Logan Square" id="Logan Square" >
+                        Logan Square
+                    </option>
+                    <option value="Humboldt Park" id="Humboldt Park">
+                        Humboldt Park
+                    </option>
+                    <option value="West Town" id="West Town">
+                        West Town
+                    </option>
+                    <option value="Austin" id="Austin">
+                        Austin
+                    </option>
+                    <option value="West Garfield Park" id="West Garfield Park">
+                        West Garfield Park
+                    </option>
+                    <option value="East Garfield Park" id="East Garfield Park">
+                        East Garfield Park
+                    </option>
+                    <option value="Near West Side" id="Near West Side">
+                        Near West Side
+                    </option>
+                    <option value="North Lawndale" id ="North Lawndale">
+                        North Lawndale
+                    </option>
+                    <option value="South Lawndale" id="South Lawndale">
+                        South Lawndale
+                    </option>
+                    <option value="Lower West Side" id="Lower West Side">
+                        Lower West Side
+                    </option>
+                    <option value="Loop" id ="Loop">
+                        Loop
+                    </option>
+                    <option value="Near South Side" id ="Near South Side">
+                        Near South Side
+                    </option>
+                    <option value="Armour Square" id="Armour Square">
+                        Armour Square
+                    </option>
+                    <option value="Douglas" id="Douglas">
+                        Douglas
+                    </option>
+                    <option value="Oakland" id="Oakland">
+                        Oakland
+                    </option>
+                    <option value="Fuller Park" id="Fuller Park">
+                        Fuller Park
+                    </option>
+                    <option value="Grand Boulevard" id="Grand Boulevard">
+                        Grand Boulevard
+                    </option>
+                    <option value="Kenwood" id="Kenwood">
+                        Kenwood
+                    </option> 
+                    <option value="Washington Park" id="Washington Park">
+                        Washington Park
+                    </option> 
+                    <option value="Hyde Park" id="Hyde Park">
+                        Hyde Park
+                    </option> 
+                    <option value="Woodlawn" id="Woodlawn">
+                        Woodlawn
+                    </option> 
+                    <option value="South Shore" id="South Shore">
+                        South Shore
+                    </option> 
+                    <option value="Chatham" id="Chatham">
+                        Chatham
+                    </option> 
+                    <option value="Avalon Park" id="Avalon Park">
+                        Avalon Park
+                    </option> 
+                    <option value="South Chicago" id="South Chicago">
+                        South Chicago
+                    </option> 
+                    <option value="Burnside" id="Burnside">
+                        Burnside
+                    </option> 
+                    <option value="Calumet Heights" id="Calumet Heights">
+                        Calumet Heights
+                    </option> 
+                    <option value="Roseland" id="Roseland">
+                        Roseland
+                    </option> 
+                    <option value="Pullman" id="Pullman">
+                        Pullman
+                    </option> 
+                    <option value="South Deering" id="South Deering">
+                        South Deering
+                    </option> 
+                    <option value="East Side" id="East Side">
+                        East Side
+                    </option> 
+                    <option value="West Pullman" id="West Pullman">
+                        West Pullman
+                    </option> 
+                    <option value="Riverdale" id="Riverdale">
+                        Riverdale
+                    </option>
+                    <option value="Hegewisch" id="Hegewisch">
+                        Hegewisch
+                    </option> 
+                    <option value="Garfield Ridge" id = "Garfield Ridge">
+                        Garfield Ridge
+                    </option> 
+                    <option value="Archer Heights" id="Archer Heights">
+                        Archer Heights
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="McKinley Park" id="McKinley Park">
+                        McKinley Park
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="Bridgeport" id="Bridgeport">
+                        Bridgeport
+                    </option>
+                    <option value="New City" id="New City">
+                        New City
+                    </option>
+                    <option value="West Elsdon" id="West Elsdon">
+                        West Elsdon
+                    </option>
+                    <option value="Gage Park" id="Gage Park">
+                        Gage Park
+                    </option>
+                    <option value="Clearing" id="Clearing">
+                        Clearing
+                    </option>
+                    <option value="West Lawn" id="West Lawn">
+                        West Lawn
+                    </option>
+                    <option value="Chicago Lawn" id="Chicago Lawn">
+                        Chicago Lawn
+                    </option>
+                    <option value="Greater Grand Crossing" id="Greater Grand Crossing">
+                        Greater Grand Crossing
+                    </option>
+                    <option value="Ashburn" id="Ashburn">
+                        Ashburn
+                    </option>
+                    <option value="Auburn Gresham" id="Auburn Gresham">
+                        Auburn Gresham
+                    </option>
+                    <option value="Beverly" id="Beverly">
+                        Beverly
+                    </option>
+                    <option value="Washington Heights" id="Washington Heights">
+                        Washington Heights
+                    </option>
+                    <option value="Mount Greenwood" id="Mount Greenwood">
+                        Mount Greenwood
+                    </option>
+                    <option value="Morgan Park" id="Morgan Park">
+                        Morgan Park
+                    </option>
+                    <option value="O'Hare" id="O'Hare">
+                        O'Hare
+                    </option>
+                    <option value="Edgewater" id="Edgewater">
+                        Edgewater
+                    </option>
+                </select>   
+
+                <select id="distDropList2" name="Districts">
+                	<option id="Chicago"> Chicago </option>
+                    <option id="Far North Side" >Far North Side</option>
+                    <option id="North West Side" >North West Side</option>
+                    <option id="North Side" >North Side</option>
+                    <option id="West Side" >West Side</option>
+                    <option id="Central" >Central</option>
+                    <option id="South Side" >South Side</option>
+                    <option id="Southwest Side" >Southwest Side</option>
+                    <option id="Far Southwest Side" >Far Southwest Side</option>
+                    <option id="Far Southeast Side" >Far Southeast Side</option>
+                </select>
+
+                <select id="dropDownList3" name="Communities">
+                    <option value="Chicago" id="Chicago">
+                        Chicago
+                    </option>
+                    <option value="Rogers Park" id="Rogers Park">
+                        Rogers Park
+                    </option>
+
+                    <option value="West Ridge" id = "West Ridge">
+                        West Ridge
+                    </option>
+
+                    <option value="Uptown" id= "Uptown">
+                        Uptown
+                    </option>
+                    <option value="Lincoln Square" id="Lincoln Square">
+                        Lincoln Square
+                    </option>
+                    <option value="North Center" id="North Center">
+                        North Center
+                    </option>
+                    <option value="Lake View" id ="Lake View">
+                        Lake View
+                    </option>
+                    <option value="Lincoln Park" id ="Lincoln Park">
+                        Lincoln Park
+                    </option>
+                    <option value="Near North Side" id ="Near North Side">
+                        Near North Side
+                    </option>
+                    <option value="Edison Park" id = "Edison Park">
+                        Edison Park
+                    </option>
+                    <option value="Norwood Park" id="Norwood Park">
+                        Norwood Park
+                    </option>
+                    <option value="Jefferson Park" id="Jefferson Park">
+                        Jefferson Park
+                    </option>
+                    <option value="Forest Glen" id="Forest Glen">
+                        Forest Glen
+                    </option>
+                    <option value="North Park" id="North Park">
+                        North Park
+                    </option>
+                     <option value="Albany Park" id="Albany Park">
+                        Albany Park
+                    </option>
+                    <option value="Portage Park" id ="Portage Park">
+                        Portage Park
+                    </option>
+                    <option value="Irving Park" id="Irving Park">
+                        Irving Park
+                    </option>
+                    <option value="Dunning" id ="Dunning">
+                        Dunning
+                    </option>
+                    <option value="Montclare" id ="Montclare">
+                        Montclare
+                    </option>
+                    <option value="Belmont Cragin" id ="Belmont Cragin">
+                        Belmont Cragin
+                    </option>
+                    <option value="Hermosa" id ="Hermosa">
+                        Hermosa
+                    </option>
+                    <option value="Avondale" id ="Avondale">
+                        Avondale
+                    </option>
+                    <option value="Logan Square" id="Logan Square" >
+                        Logan Square
+                    </option>
+                    <option value="Humboldt Park" id="Humboldt Park">
+                        Humboldt Park
+                    </option>
+                    <option value="West Town" id="West Town">
+                        West Town
+                    </option>
+                    <option value="Austin" id="Austin">
+                        Austin
+                    </option>
+                    <option value="West Garfield Park" id="West Garfield Park">
+                        West Garfield Park
+                    </option>
+                    <option value="East Garfield Park" id="East Garfield Park">
+                        East Garfield Park
+                    </option>
+                    <option value="Near West Side" id="Near West Side">
+                        Near West Side
+                    </option>
+                    <option value="North Lawndale" id ="North Lawndale">
+                        North Lawndale
+                    </option>
+                    <option value="South Lawndale" id="South Lawndale">
+                        South Lawndale
+                    </option>
+                    <option value="Lower West Side" id="Lower West Side">
+                        Lower West Side
+                    </option>
+                    <option value="Loop" id ="Loop">
+                        Loop
+                    </option>
+                    <option value="Near South Side" id ="Near South Side">
+                        Near South Side
+                    </option>
+                    <option value="Armour Square" id="Armour Square">
+                        Armour Square
+                    </option>
+                    <option value="Douglas" id="Douglas">
+                        Douglas
+                    </option>
+                    <option value="Oakland" id="Oakland">
+                        Oakland
+                    </option>
+                    <option value="Fuller Park" id="Fuller Park">
+                        Fuller Park
+                    </option>
+                    <option value="Grand Boulevard" id="Grand Boulevard">
+                        Grand Boulevard
+                    </option>
+                    <option value="Kenwood" id="Kenwood">
+                        Kenwood
+                    </option> 
+                    <option value="Washington Park" id="Washington Park">
+                        Washington Park
+                    </option> 
+                    <option value="Hyde Park" id="Hyde Park">
+                        Hyde Park
+                    </option> 
+                    <option value="Woodlawn" id="Woodlawn">
+                        Woodlawn
+                    </option> 
+                    <option value="South Shore" id="South Shore">
+                        South Shore
+                    </option> 
+                    <option value="Chatham" id="Chatham">
+                        Chatham
+                    </option> 
+                    <option value="Avalon Park" id="Avalon Park">
+                        Avalon Park
+                    </option> 
+                    <option value="South Chicago" id="South Chicago">
+                        South Chicago
+                    </option> 
+                    <option value="Burnside" id="Burnside">
+                        Burnside
+                    </option> 
+                    <option value="Calumet Heights" id="Calumet Heights">
+                        Calumet Heights
+                    </option> 
+                    <option value="Roseland" id="Roseland">
+                        Roseland
+                    </option> 
+                    <option value="Pullman" id="Pullman">
+                        Pullman
+                    </option> 
+                    <option value="South Deering" id="South Deering">
+                        South Deering
+                    </option> 
+                    <option value="East Side" id="East Side">
+                        East Side
+                    </option> 
+                    <option value="West Pullman" id="West Pullman">
+                        West Pullman
+                    </option> 
+                    <option value="Riverdale" id="Riverdale">
+                        Riverdale
+                    </option>
+                    <option value="Hegewisch" id="Hegewisch">
+                        Hegewisch
+                    </option> 
+                    <option value="Garfield Ridge" id = "Garfield Ridge">
+                        Garfield Ridge
+                    </option> 
+                    <option value="Archer Heights" id="Archer Heights">
+                        Archer Heights
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="McKinley Park" id="McKinley Park">
+                        McKinley Park
+                    </option>
+                    <option value="Brighton Park" id="Brighton Park">
+                        Brighton Park
+                    </option>
+                    <option value="Bridgeport" id="Bridgeport">
+                        Bridgeport
+                    </option>
+                    <option value="New City" id="New City">
+                        New City
+                    </option>
+                    <option value="West Elsdon" id="West Elsdon">
+                        West Elsdon
+                    </option>
+                    <option value="Gage Park" id="Gage Park">
+                        Gage Park
+                    </option>
+                    <option value="Clearing" id="Clearing">
+                        Clearing
+                    </option>
+                    <option value="West Lawn" id="West Lawn">
+                        West Lawn
+                    </option>
+                    <option value="Chicago Lawn" id="Chicago Lawn">
+                        Chicago Lawn
+                    </option>
+                    <option value="Greater Grand Crossing" id="Greater Grand Crossing">
+                        Greater Grand Crossing
+                    </option>
+                    <option value="Ashburn" id="Ashburn">
+                        Ashburn
+                    </option>
+                    <option value="Auburn Gresham" id="Auburn Gresham">
+                        Auburn Gresham
+                    </option>
+                    <option value="Beverly" id="Beverly">
+                        Beverly
+                    </option>
+                    <option value="Washington Heights" id="Washington Heights">
+                        Washington Heights
+                    </option>
+                    <option value="Mount Greenwood" id="Mount Greenwood">
+                        Mount Greenwood
+                    </option>
+                    <option value="Morgan Park" id="Morgan Park">
+                        Morgan Park
+                    </option>
+                    <option value="O'Hare" id="O'Hare">
+                        O'Hare
+                    </option>
+                    <option value="Edgewater" id="Edgewater">
+                        Edgewater
+                    </option>
+                </select>
+
+                <select id="distDropList3" name="Districts">
+                	<option id="Chicago">Chicago</option>
+                    <option id="Far North Side" >Far North Side</option>
+                    <option id="North West Side" >North West Side</option>
+                    <option id="North Side" >North Side</option>
+                    <option id="West Side" >West Side</option>
+                    <option id="Central" >Central</option>
+                    <option id="South Side" >South Side</option>
+                    <option id="Southwest Side" >Southwest Side</option>
+                    <option id="Far Southwest Side" >Far Southwest Side</option>
+                    <option id="Far Southeast Side" >Far Southeast Side</option>
+                </select>
+
+                <button type="button" onclick="passParameters()">Show Race Data
+                </button>
+                <button type="button" onclick="getPlaceOfOrigin()">Show Place of Origin Data
+                </button>
+                <button type="button" onclick="mainAgeParameters()">Age & Gender
+                </button>
+
+
+			</div>
+
+		</div>
+</head>
+<body>
+
+		
+	        <script>
+	        
+	            function initDropDownChangeHandler (){
+	             
+	                var element = document.getElementById("Chicago_Data");
+
+	                element.onchange = updateDropDownTarget;
+	                element.onchange();
+	            }
+
+	            function updateDropDownTarget(){
+	                var id = this.options[this.selectedIndex].value;   
+	                // comm/district
+	                console.log("id--" + id);
+
+	                var getTag = this.parentNode.getElementsByTagName("select");
+	                // HTML Object
+
+	                console.log("getTag " + getTag);
+	                var length = getTag.length;
+	                //length of the object
+
+	                console.log("length" + length);
+
+	                for (var indx = length - 1; indx > 0; --indx) {
+
+	                console.log("Class -- " + getTag[indx].name);
+
+	                    if (getTag[indx].name == id)  {
+	                        getTag[indx].style.display = "inline";
+	                    }   
+	                    else {
+	                        getTag[indx].style.display = "none";
+	                    }    
+	                }
+
+	            }
+
+				window.onload = initDropDownChangeHandler;
+	        </script>
+        	<script src="sb-admin-2.js" type="text/javascript"></script>
+			<script src="http://d3js.org/d3.v3.min.js"></script>
+			<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</body>
+</html>

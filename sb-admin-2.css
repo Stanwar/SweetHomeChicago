@@ -1,0 +1,126 @@
+@-ms-viewport{
+width: extend-to-zoom;
+zoom: 1.0;
+}
+@viewport{
+zoom: 1.0;
+width: extend-to-zoom;
+}
+
+div.box { 
+        height: 100%;
+        width: 100%; 
+    }
+
+div.div1 {
+    background: #EEE; 
+    height: 90%; 
+    width : 25%; 
+    color:#006633;
+    float: left;
+
+    }
+div.div2{float: left ; height: 90%; width: 25%; font-family: arial,sans-serif; }
+    div.div21{height: 50%; width: 100%;}
+    div.div23{height: 50%; width: 100%;}
+
+div.div3{float: left ; height: 90%; width: 25%; font-family: arial,sans-serif; }
+    div.div31{height: 50%; width: 100%;}
+    div.div33{height: 50%; width: 100%;}
+
+div.div4{float: left ; height: 90%; width : 25%;font-family: arial,sans-serif; }
+    div.div41{height: 50%; width: 100%;}
+    div.div43{height: 50%; width: 100%;}
+
+div.div5{height: 10%; width : 100%;font-family: arial,sans-serif; text-align: left }
+  
+
+
+  @media (min-width: 500px) and (max-width: 3000px) {
+
+        .x.axis path {
+          display: yes;
+          font-size : 10px;
+          font-weight: bold;
+        }
+
+        div.div1 text {
+            font-size :10px;
+        }
+
+        div.div2 text {
+            font-size : 10px;
+            font-weight: bold;
+        }
+
+        div.div3 text {
+            font-size : 10px;
+            font-weight: bold;
+        }
+
+        div.div4 text {
+            font-size : 10px;
+            font-weight: bold;
+        }
+        div.div5 select {
+            font-size : 10px;
+            font-weight: bold;
+        }
+        .tick {
+        font-size : 20px;
+    } 
+
+
+}
+
+    @media (min-width: 3200px) and (max-width: 8400px) {
+
+        body {
+            font-size: 35px;
+        }
+
+        .x.axis path {
+          display: yes;
+          font-size : 35px;
+          font-weight : bold;
+        }
+
+        div.div1 text {
+            font-size :40px;
+        }
+
+        div.div2 text {
+            font-size : 35px;
+            font-weight: bold;
+        }
+
+        div.div3 text {
+            font-size : 35px;
+            font-weight: bold;
+        }
+
+        div.div4 text {
+            font-size : 30px;
+            font-weight: bold;
+        }
+        div.div5 select {
+            font-size : 35px;
+            font-weight: bold;
+        }
+        .tick {
+        font-size : 35px;
+        } 
+    }
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  font-size :500;
+}
+
+.bar {
+  fill: steelblue;
+}

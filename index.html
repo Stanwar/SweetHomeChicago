@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Visualization and Visual Analytics- Sweet Home Chicago</title>
+        <style>
+             @-ms-viewport{
+            width: extend-to-zoom;
+            zoom: 1.0;
+            }
+            @viewport{
+                zoom: 1.0;
+                width: extend-to-zoom;
+            }
+
+             @media (min-width: 500px) and (max-width: 3000px) {
+                            body{
+                height: 100%;
+                width: 100%;
+                font-size : 15px;
+            }
+
+                text {
+                font-size: 15px;
+                }
+
+              }
+
+            @media (min-width: 3200px) and (max-width: 8400px) {
+              body{
+                  height: 100%;
+                  width: 100%;
+                  font-size : 40px;
+              }
+              text {
+                  font-size: 40px;
+              }
+            }
+
+            div.box {height: 100%; width: 100%; }
+            div.div1 {
+               
+                height: 5%; 
+                width : 100%; 
+                font-size: 15px; 
+                font-family: arial,sans-serif; 
+                background-color : #333; 
+                color: white;
+                border:1px solid black;
+            }
+            div.div2{ 
+                background: #999; 
+                float: left ; 
+                height: 95%; 
+                width: 20%; 
+            }
+            div.div3{ 
+                background: white; 
+                height: 95%; 
+                width: 80%;
+                float : left;
+                }
+
+            h1 {
+                font-size: 
+            }
+
+            <script src="http://d3js.org/d3.v3.min.js"></script>
+            <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        </style>
+    </head>
+
+    <body>
+        <script src="sb-admin-2.js" type="text/javascript"></script>
+        <div class="box">
+            <div class="div1" id="div1">
+                <h1><center>SWEET HOME CHICAGO</center><h1>
+            </div>
+            <div class="div2" id="div2">
+                </br>
+
+                    <a href="http://stanwa2.people.uic.edu/EVL/Sweethomechicago/testcss.html">
+                        <h4>Chicago Demographics</h4>
+                        </a><br>
+
+                    <a href="http://stanwa2.people.uic.edu/About.html">
+                        <h4>About the Project</h4><br>
+
+                    <a href="http://stanwa2.people.uic.edu/DataManipulation.html">
+                    <h4>Data for the project</h4><br>
+
+                    <a href="http://stanwa2.people.uic.edu/SourceCode.html">
+                    <h4>Download Source Code</h4><br>
+
+                    <a href="http://stanwa2.people.uic.edu/Findings.html">
+                    <h4>Interesting Findings</h4><br>
+                   
+                    </a><br>
+
+            </div>
+            <div class="div3" id="div3">
+
+            </div>
+            <script src="http://d3js.org/d3.v3.min.js"></script>
+            <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+                <script type="text/javascript">
+
+                    function initialize() {
+
+                        console.log(map_height);
+
+                        myDivValue = "div3";
+
+                        // Defining variables for width and height
+                        var margin = {top: 50, right: 50, bottom: 30, left: 40};
+                        var map_width = Math.round(document.getElementById(myDivValue).clientWidth/1.2);
+                        var map_height = Math.round(map_width/1.3);
+
+                        myDivValue = "#" + myDivValue;
+                        var  svg = d3.select(myDivValue)
+                                  .append("svg")
+                                  .attr("width", map_width)
+                                  .attr("height", map_height)
+                                //  .attr("viewBox", "0 0 4000 2000")
+                              //    .attr("preserveAspectRatio","xMaxYmax")
+                                  ;
+
+                        var color = d3.scale.quantize()
+                                  .range(["rgb(250,29,5)",
+                                          "rgb(250,5,250)",
+                                          "rgb(101,201,136)",
+                                          "rgb(2,250,89)",
+                                          "rgb(250,188,2)",
+                                          "rgb(250,130,2)",
+                                          "rgb(213,250,13)",
+                                          "rgb(4,149,246)",
+                                          "rgb(186,138,164)"]);
+
+
+                          d3.csv("comm_chicago.csv", function(data) {
+                            //Set input domain for color scale
+                            color.domain([
+                              d3.min(data, function(d) { return d.district_value; }), 
+                              d3.max(data, function(d) { return d.district_value; })
+                            ]);
+
+                          d3.json("chicago_map.json", function(json) {
+                          //Loop through to merge data with Json File
+                                for (var i = 0; i < data.length; i++) {
+
+                                    //Grab community name
+                                    var dataCommunity = data[i].community;
+
+                                    //Grab data value, and convert from string to float
+                                    var dataValue = parseFloat(data[i].district_value);
+
+                                    //Find the corresponding community inside the Json file
+                                    for (var j = 0; j < json.features.length; j++) {
+
+                                        var jsonCommunity = json.features[j].properties.name;
+
+                                        // console.log("Coordinates" + json.features[j].geometry.coordinates);
+
+                                        if (dataCommunity == jsonCommunity) {
+
+                                            //Copy the data value into the JSON
+                                            json.features[j].properties.value = dataValue;
+
+                                            //Stop looking through the JSON
+                                            break;
+
+                                        }
+                                    }   
+                                }
+                            var center = d3.geo.centroid(json);
+                            var scale  = map_width *   80 ;
+                            var translateOffset = [map_width/3,map_height/2];
+
+                            var projection = d3.geo.mercator()
+                                              .scale(scale)
+                                              .center(center)
+                                              .translate(translateOffset);
+
+
+                            //Define path generator
+                            var path = d3.geo.path()
+                                     .projection(projection);
+
+                                     console.log("Before PAth ");
+
+                            svg.selectAll("path")
+                               .data(json.features)
+                               .enter()
+                               .append("path")
+                               .attr("d", path)
+                               .attr("stroke","white")
+                               .style("fill", function(d) {
+                                //Get data value
+                                var value = d.properties.value;
+                                if (value) {
+                                  //If value exists…
+                                  return color(value);
+                                } else {
+                                  //If value is undefined…
+                                  return "#333";
+                                }
+                             });
+
+                               svg.selectAll("text")
+                               .data(json.features)
+                               .enter()
+                               .append("svg:text")
+                               .text(function(d){
+                                  return d.properties.name;
+                                })
+                               .attr("x", function(d){
+                                return path.centroid(d)[0];
+                                })
+                                .attr("y", function(d){
+                                return  path.centroid(d)[1];
+                                })
+                                .attr("text-anchor","middle")
+                                .attr("stroke","black")
+                                .style("font-size", function (d){
+                                    return map_width/100 + "px"; 
+                                    })
+                                .attr("text-anchor",function(d){
+                                     var regionName = d.properties.name;
+                                     if (regionName == "West Garfield Park"){
+                                       return "middle";
+                                   }
+                                   else if (regionName == "East Garfield Park"){
+                                       return "top";
+                                   }
+                                   else if ( regionName == "Hegewisch"){
+                                       return "bottom";
+                                   }
+                                   else if ( regionName =="Burnside"){
+                                   return "bottom";
+                                   }        
+                                   else if ( regionName == "West Englewood"){
+                                    return "bottom";
+                                   }
+                                      else if ( regionName == "Englewood"){
+                                    return "top";
+                                   }
+                                   else {
+                                       return "middle";
+                                   }
+                                    });
+                            
+
+                  })
+
+                    });
+
+                }
+                initialize()   
+                </script>
+        </div>
+            
+    </body>
+
+</html>
+
+                            
